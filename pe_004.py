@@ -1,9 +1,9 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 # These are more fun if you figure them out yourself!
-'''
-This is a better method but still could be better.
-TODO: find out properties of palindrome numbers, make BETTER!
-'''
+
+# This is a better method but still could be better. I also don't like the 
+# fact that the function `is_palindrome()` is not mathematical :<
+# TODO: find out properties of palindrome numbers, make BETTER!
 
 def main():
     largest_palindrome = 0

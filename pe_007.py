@@ -5,12 +5,12 @@ import math
 def main():
     print_last_factor()
 
-'''
-Let's be efficient: after 3 all prime numbers are either 6n+1 or 6n-1. We are
-keeping the factors in a list, instead of just keeping the last found, since
-I'm pretty sure its more efficient to keep this list and check new candidates
-against old primes, since all numbers have at least one prime as a factor.
-'''
+# Let's be efficient: after 3 all prime numbers are either 6n+1 or 6n-1. We 
+# are keeping the factors in a list, instead of just keeping the last found, 
+# sincek I'm pretty sure its more efficient to keep this list and check new 
+# candidates against old primes, since all numbers have at least one prime as 
+# a factor.
+
 def print_last_factor():
     factors = [2, 3]
     i = 1
@@ -28,11 +28,10 @@ def print_last_factor():
 
     print(factors[-1])
 
-''' 
-Here we are checking the candidate against ALL primes found thus far, where we
-should only be checking until we reach the largest possible factor
-TODO: make the commented out code work.
-'''
+# Here we are checking the candidate against ALL primes found thus far, where 
+# we should only be checking until we reach the largest possible factor
+# TODO: make the commented out code work.
+
 def is_prime(candidate, factors):
     i = 0
     # max_poss = candidate / 2

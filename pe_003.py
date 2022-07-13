@@ -28,7 +28,7 @@ def largest_prime_factor(n: int) -> int:
 
 def main():
     if len(sys.argv) == 1:
-        print(largest_prime_factor(10))
+        print(largest_prime_factor(600_851_475_143))
     print(largest_prime_factor(int(sys.argv[1])))
 
 if __name__ == '__main__':
