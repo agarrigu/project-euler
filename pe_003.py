@@ -7,14 +7,15 @@ def largest_prime_factor(n: int) -> int:
     # MAX_FACT = n // 3 # There is a more precise number but its a float
     primes = [2, 3] # Populate primes that don't follow 6n±1 rule
     prime_factors = []
+    if n % 2 == 0:
+        prime_factors.append(2)
+    if n % 3 == 0:
+        prime_factors.append(3)
     
 
-    for i in range(1, n // 6 + 1): #MAX_FACT // 6):
-        six_n_minus_one = i * 6 - 1
-        six_n_plus_one = i * 6 + 1
-        print(six_n_minus_one)
-        print(six_n_plus_one)
-        print(prime_factors)
+    for i in range(n, 6, -6): #MAX_FACT // 6):
+        six_n_minus_one = i - 1
+        six_n_plus_one = i + 1
         if all(six_n_minus_one % prime != 0 for prime in primes):
             primes.append(six_n_minus_one)
             if n % six_n_minus_one == 0:
@@ -23,6 +24,7 @@ def largest_prime_factor(n: int) -> int:
             primes.append(six_n_plus_one)
             if n % six_n_plus_one == 0:
                 prime_factors.append(six_n_plus_one)
+    print(prime_factors)
 
     return prime_factors[-1]
 
